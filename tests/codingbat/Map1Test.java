@@ -31,10 +31,8 @@ class Map1Test {
         map1.put("a", "cat");
         map1.put("b", "dog");
         map1.put("c", "rabbit");
-        // Map1.mapShare refers to the Path
         Map<String, String> map2 = Map1.mapShare(map1);
         assertEquals(map2.get("b"), "cat");
         assertFalse(map2.containsKey("c"));
     }
-
 }
