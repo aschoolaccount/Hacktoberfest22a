@@ -2,11 +2,9 @@ package codingbat;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class Map1Test {
 
@@ -25,6 +23,18 @@ class Map1Test {
         Map<String, String> map4 = Map1.mapAB2(map3);
         assertTrue(map4.containsKey("a"));
         assertTrue(map4.containsKey("b"));
+    }
+
+    @Test
+    void michael_mapShare() {
+        Map<String, String> map1 = new HashMap<>();
+        map1.put("a", "cat");
+        map1.put("b", "dog");
+        map1.put("c", "rabbit");
+        // Map1.mapShare refers to the Path
+        Map<String, String> map2 = Map1.mapShare(map1);
+        assertEquals(map2.get("b"), "cat");
+        assertFalse(map2.containsKey("c"));
     }
 
 }
