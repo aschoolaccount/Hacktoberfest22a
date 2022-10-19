@@ -17,12 +17,15 @@ public class AscendDescend {
     }
 
     public int length() {
+        return length;
     }
 
     public int minimum() {
+        return minimum;
     }
 
     public int maximum() {
+        return maximum;
     }
 }
 
