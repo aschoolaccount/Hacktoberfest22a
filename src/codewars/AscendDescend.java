@@ -7,12 +7,21 @@ public class AscendDescend {
     private int maximum;
 
     public static String ascendDescend(int length, int minimum, int maximum) {
-         if (maximum > minimum || length == 0) {
-             System.out.println(" ");
-         }
-         else {
+        length();
+        try {
+            while (length > 0) {
+                if (maximum < minimum || length == 0) {
+                    System.out.println(" ");
+                } else {
 
-         }
+                }
+            }
+        }
+        catch (IllegalArgumentException ex) {
+            if (length < 0) {
+                System.out.println("Value cannot be negative");
+            }
+        }
         return "";
     }
 
